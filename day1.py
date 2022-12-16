@@ -1,12 +1,13 @@
-from urllib.request import urlopen
-s = "https://raw.githubusercontent.com/MathewGarvin/Advent2022/main/advent2022day1input.txt"
+input_source = "https://raw.githubusercontent.com/MathewGarvin/Advent2022/main/advent2022day1input.txt"
+f = urlopen(input_source)
+
+g = f.readlines()
 
 def d(e):
-    f = urlopen(s)
     b = [0] * e
     c = 0
     
-    for a in f:
+    for a in g:
 
         if a == b"\n":
             b.append(c)
