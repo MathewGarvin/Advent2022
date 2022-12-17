@@ -1,0 +1,14 @@
+# part 1 only
+from urllib.request import urlopen
+input_source = "https://raw.githubusercontent.com/MathewGarvin/Advent2022/main/advent2022day3input.txt"
+f = urlopen(input_source)
+
+i = f.read()
+s = 0
+
+for a in i.split(b"\n")[:-1]:
+    l = len(a) // 2
+    e = min(set(a[:l]) & set(a[l:]))
+    s += e - 38 - 58 * (e > 90)
+    
+print(s)
