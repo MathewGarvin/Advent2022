@@ -7,8 +7,8 @@ y = 0
 z = 0
 
 for a in i:
-    f, g, h, j = [int(e) for g in a.split(b",") for e in g.split(b"-")]
-    y += (h - f) * (j - g) < 1
-    z += (f <= j) * (h <= g)
+    d, g, h, j = [int(e) for g in a.split(b",") for e in g.split(b"-")]
+    y += (h - d) * (j - g) < 1
+    z += (d <= j) * (h <= g)
 
 print(y, z)
