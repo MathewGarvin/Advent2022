@@ -1,3 +1,6 @@
+from urllib.request import urlopen
+input_source = "https://raw.githubusercontent.com/MathewGarvin/Advent2022/main/advent2022day8input.txt"
+
 f = urlopen(input_source)
 
 j = f.read().split()
